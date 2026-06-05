@@ -1,11 +1,17 @@
 <div class="min-h-screen flex items-center justify-center bg-slate-100">
-  <div class="w-full max-w-md bg-white rounded-x1 shadow-lg p-8">
+  <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
     <h1 class="text-3xl font-bold text-center mb-6">El Regalo Perfecto, S.A.</h1>
 
-    <form class="pace-y-4">
+    <form (ngSubmit)="login()" class="space-y-4">
       <div>
         <label class="block mb-2">Usuario</label>
-        <input type="text" placeholder="Ingresa tu usuario" class="w-full border rounded-lg p-3" />
+        <input
+          type="text"
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Ingresa tu usuario"
+          class="w-full border rounded-lg p-3"
+        />
       </div>
 
       <div>
@@ -13,12 +19,14 @@
 
         <input
           type="password"
+          [(ngModel)]="password"
+          name="password"
           placeholder="Ingresa tu contraseña"
           class="w-full border rounded-lg p-3"
         />
       </div>
 
-      <button type="sumit" class="w-full bg-blue-600 text-white rounded-lg p-3">
+      <button type="submit" class="w-full bg-blue-600 text-white rounded-lg p-3">
         Iniciar sesion
       </button>
     </form>
