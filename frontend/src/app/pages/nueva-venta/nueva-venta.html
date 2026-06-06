@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="bg-slate-100 min-h-screen p-6">
+  <h1 class="text-3xl font-bold mb-6">Nueva Venta</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+    <!--Panel Izquierdo-->
+    <div class="bg-white rounded-2xl shadow-lg p-4">
+      <input type="text" placeholder="Buscar Producto" class="w-full border rounded-lg p-3 mb-4" />
+      <div class="space-y-3">
+        <div class="border rounded-xl p-4 hover:bs-slate-100 cursor-pointer">
+          <h3 class="font-bold">Perfume</h3>
+          <p class="text-gray-500">$50.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Panel Derecho-->
+    <div class="lg:col-span-3 flex flex-col gap-6">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="p-4 text-center">Producto</th>
+              <th class="p-4 text-center">SKU</th>
+              <th class="p-4 text-center">Precio Unitario</th>
+              <th class="p-4 text-center">Cantidad</th>
+              <th class="p-4 text-center">Descuento</th>
+              <th class="p-4 text-center">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="p-4 text-center">Perfume</td>
+              <td class="p-4 text-center">EPA-01</td>
+              <td class="p-4 text-center">$50.00</td>
+              <td class="p-4 text-center">
+                <div class="flex items-center justify-center gap-2">
+                  <button class="bg-blue-600 text-white px-3 py-1 rounded">-</button>
+                  <span>1</span>
+                  <button class="bg-blue-600 text-white px-3 py-1 rounded">+</button>
+                </div>
+              </td>
+              <td class="p-4 text-center">
+                <select class="border rounded p-2">
+                  <option>0%</option>
+                  <option>5%</option>
+                  <option>10%</option>
+                </select>
+              </td>
+              <td class="p-4 text-center">$50.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <!--Totales-->
+        <div class="border-t p-6 text-right">
+          <p class="mb-2">Subtotal: $50.00</p>
+          <p class="mb-2">Impuestos(16%): $8.00</p>
+          <h2 class="font-bold text-3xl">Total Venta: $58.00</h2>
+        </div>
+        <!--Parte Inferior-->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <select class="w-full border rounded-lg p-3 mb-4">
+              <option>Cliente/Venta</option>
+            </select>
+            <textarea class="w-full border rounded-lg p-3" placeholder="Notas"></textarea>
+          </div>
+          <div>
+            <h2 class="font-bold text-xl mb-4">Resumen de pago</h2>
+            <div class="flex gap-4 mb-4">
+              <button class="flex-1 bg-blue-600 text-white rounded-lg p-3">Efectivo</button>
+              <button class="flex-1 bg-blue-600 text-white rounded-lg p-3">Tarjeta bancaria</button>
+            </div>
+            <button class="w-full bg-blue-600 text-white rounded-lg p-4 text-xl">
+              Finalizar Venta
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

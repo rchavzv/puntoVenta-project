@@ -1,8 +1,22 @@
 import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
+import { Dashboard } from './pages/dashboard/dashboard';
 export const routes: Routes = [
   {
     path: '',
     component: Login,
+  },
+  {
+    path: 'dashboard',
+    component: Dashboard,
+  },
+  {
+    path: 'nueva-venta',
+    loadComponent: () => import('./pages/nueva-venta/nueva-venta').then((m) => m.NuevaVenta),
+  },
+  {
+    path: 'nuevo-producto',
+    loadComponent: () =>
+      import('./pages/nuevo-producto/nuevo-producto').then((m) => m.NuevoProducto),
   },
 ];

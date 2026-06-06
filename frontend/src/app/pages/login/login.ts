@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,10 @@ export class Login {
   username = '';
   password = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+  ) {}
 
   login() {
     const body = {
@@ -25,21 +29,14 @@ export class Login {
 
       .subscribe({
         next: (response) => {
-          console.log('RESPUESTA');
           console.log(response);
-
-          alert('Login OK');
+          //alert('Login Correcto');
+          this.router.navigate(['/dashboard']);
         },
 
         error: (err) => {
-          console.log('ERROR COMPLETO');
           console.log(err);
-
-          if (err.error) {
-            console.log('Respuesta backend:');
-            console.log(err.error);
-          }
-          alert('Error Login');
+          alert('Usuario o contraseña incorrectos');
         },
       });
   }
