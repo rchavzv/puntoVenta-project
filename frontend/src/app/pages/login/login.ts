@@ -25,7 +25,7 @@ export class Login {
     };
 
     this.http
-      .post('http://192.168.100.59:8080/auth/login', body, { responseType: 'text' })
+      .post('/api/auth/login', body, { responseType: 'text' })
 
       .subscribe({
         next: (response) => {
