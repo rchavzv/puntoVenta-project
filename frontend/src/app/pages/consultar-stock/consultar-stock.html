@@ -1,0 +1,90 @@
+<app-header></app-header>
+<div class="bg-slate-100 min-h-screen p-6">
+  <h1 class="text-2xl font-bold mb-8">Invetario / Consultar Stock</h1>
+  <div class="bg-white rounded-2xl shadow-lg p-8">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-7">
+        <h2 class="text-2xl font-bold mb-6">Busqueda y Filtros</h2>
+        <div class="space-y-5">
+          <div>
+            <label class="font-medium block mb-2"> Nombre del producto o SKU </label>
+          </div>
+          <div>
+            <div>
+              <label class="font-medium block mb-2"> Categoría </label>
+              <select
+                class="w-full border border-slate-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+              >
+                <option>Seleccionar categoría...</option>
+                <option>Perfumería</option>
+                <option>Joyería</option>
+                <option>Velas</option>
+              </select>
+            </div>
+            <div>
+              <label class="font-medium block mb-2">Ubicación en Bodega</label>
+              <select
+                class="w-full border border-slate-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+              >
+                <option>Seleccionar ubicación...</option>
+                <option>Pasillo A - Estante 2</option>
+                <option>Pasillo B - Estante 1</option>
+              </select>
+            </div>
+            <div>
+              <label class="font-medium block mb-2">Proveedor</label>
+              <select
+                class="w-full border border-slate-300 rounded-lg p-3 bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+              >
+                <option>Seleccionar proveedor...</option>
+                <option>Proveedores S.A.</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Derecha: Métricas de Stock (Ocupa 5 de 12 columnas en pantallas grandes) -->
+    <div class="lg:col-span-5 space-y-5">
+      <h2 class="text-2xl font-bold mb-6">Métricas de Stock</h2>
+      <!-- Tarjeta de Total de Productos -->
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-xs">
+        <p class="text-sm font-medium text-slate-500">Total de Productos en Inventario</p>
+        <p class="text-4xl font-bold text-slate-900 mt-2">150</p>
+      </div>
+    </div>
+    <!-- Mini Grid para Alertas de Stock Bajo y Fuera de Stock -->
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Stock Bajo -->
+      <div
+        class="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-xs flex flex-col justify-between"
+      >
+        <p class="text-xs font-medium text-slate-500">Productos con Stock Bajo</p>
+        <div class="flex items-center gap-2 mt-3">
+          <span class="text-3xl font-bold text-slate-900">12</span>
+          <span class="text-yellow-500 text-xl" title="Alerta">⚠️</span>
+        </div>
+      </div>
+    </div>
+    <!-- Fuera de Stock -->
+    <div
+      class="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-xs flex flex-col justify-between"
+    >
+      <p class="text-xs font-medium text-slate-500">Productos Fuera de Stock</p>
+      <div class="flex items-center gap-2 mt-3">
+        <span class="text-3xl font-bold text-slate-900">5</span>
+        <span class="text-red-500 text-xl font-bold" title="Crítico">❌</span>
+      </div>
+    </div>
+  </div>
+  <!-- Banner Inferior de Fuera de Stock (Ancho completo de la columna derecha) -->
+  <div
+    class="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-xs flex justify-between items-center"
+  >
+    <p class="text-sm font-medium text-slate-500">Productos Fuera de Stock</p>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-bold text-slate-900">5</span>
+      <span class="text-red-500 text-xl">❌</span>
+    </div>
+  </div>
+</div>
