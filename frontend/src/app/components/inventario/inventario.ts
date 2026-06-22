@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class Inventario {
   constructor(private router: Router) {}
   consultarStock() {
-    this.router.navigate(['./consultar-stock']);
+    this.router.navigate(['/consultar-stock']);
   }
 
   nuevoProducto() {

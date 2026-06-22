@@ -29,6 +29,7 @@ Ingresar al la ruta frontend/ y ejecutar en la terminal
 Agregar los puertos 4200 y 8080 a ufw
 Conexion a MariaDB en /src/main/resources/application.properties
 
+esta es una prueba de permisos en linux con win
 
 
 
